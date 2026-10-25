@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Dark Mode Engine",
+  "version": "1.0",
+  "description": "Premium and intelligent dark mode for all websites.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["darkmode.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+/* Premium Universal Dark Engine */
+
+html.smart-dark-mode-active {
+  filter: invert(1) hue-rotate(180deg) contrast(0.92) brightness(0.95) !important;
+  background-color: #121212 !important;
+}
+
+html.smart-dark-mode-active img,
+html.smart-dark-mode-active video,
+html.smart-dark-mode-active iframe,
+html.smart-dark-mode-active canvas,
+html.smart-dark-mode-active [role="img"] {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
+
+html.smart-dark-mode-active input,
+html.smart-dark-mode-active textarea,
+html.smart-dark-mode-active select,
+html.smart-dark-mode-active [contenteditable="true"],
+html.smart-dark-mode-active [role="search"],
+html.smart-dark-mode-active [role="combobox"] {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #cccccc !important;
+}
+
+html.smart-dark-mode-active [class*="search"],
+html.smart-dark-mode-active [id*="search"],
+html.smart-dark-mode-active [class*="input"],
+html.smart-dark-mode-active [class*="bar"] {
+  background-color: transparent !important;
+}
+
+html.smart-dark-mode-active ::-webkit-scrollbar {
+  width: 10px;
+  background-color: #121212;
+}
+
+html.smart-dark-mode-active ::-webkit-scrollbar-thumb {
+  background-color: #333333;
+  border-radius: 5px;
+}

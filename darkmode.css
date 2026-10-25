@@ -1,4 +1,4 @@
-/* Modern Universal Dark Engine - Direct Color Mapping */
+/* Modern Universal Dark Engine - Fixed Search & Headings */
 
 html.smart-dark-mode-active,
 html.smart-dark-mode-active body {
@@ -31,20 +31,22 @@ html.smart-dark-mode-active [role="img"] {
   mix-blend-mode: normal !important;
 }
 
-/* Typography elements */
+/* Typography elements - make headings bright and clear */
 html.smart-dark-mode-active h1,
 html.smart-dark-mode-active h2,
 html.smart-dark-mode-active h3,
 html.smart-dark-mode-active h4,
 html.smart-dark-mode-active h5,
-html.smart-dark-mode-active h6,
+html.smart-dark-mode-active h6 {
+  color: #ffffff !important;
+}
+
 html.smart-dark-mode-active p,
 html.smart-dark-mode-active span,
-html.smart-dark-mode-active a,
 html.smart-dark-mode-active li,
 html.smart-dark-mode-active td,
 html.smart-dark-mode-active th {
-  color: #e0e0e0 !important;
+  color: #d1d5db !important;
 }
 
 /* Links styling for visibility */
@@ -52,14 +54,24 @@ html.smart-dark-mode-active a {
   color: #64b5f6 !important;
 }
 
-/* Input fields, textareas and search bars */
+/* Search bar & Input fields fix */
 html.smart-dark-mode-active input,
 html.smart-dark-mode-active textarea,
 html.smart-dark-mode-active select,
-html.smart-dark-mode-active [contenteditable="true"] {
+html.smart-dark-mode-active [contenteditable="true"],
+html.smart-dark-mode-active [role="searchbox"],
+html.smart-dark-mode-active input[type="text"],
+html.smart-dark-mode-active input[type="search"] {
   background-color: #1e1e1e !important;
   color: #ffffff !important;
-  border-color: #333333 !important;
+  border-color: #444444 !important;
+}
+
+/* Specific fix for Gmail search bar wrapper */
+html.smart-dark-mode-active [class*="search"],
+html.smart-dark-mode-active [id*="search"] {
+  background-color: #262626 !important;
+  color: #ffffff !important;
 }
 
 /* Scrollbars */

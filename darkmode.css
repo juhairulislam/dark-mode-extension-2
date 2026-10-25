@@ -1,29 +1,45 @@
-/* Premium Universal Dark Engine */
+/* Premium Universal Dark Engine - Polished Version */
 
 html.smart-dark-mode-active {
   filter: invert(1) hue-rotate(180deg) contrast(0.92) brightness(0.95) !important;
   background-color: #121212 !important;
 }
 
+/* Keep media, images, and SVGs in correct colors */
 html.smart-dark-mode-active img,
 html.smart-dark-mode-active video,
 html.smart-dark-mode-active iframe,
 html.smart-dark-mode-active canvas,
-html.smart-dark-mode-active [role="img"] {
+html.smart-dark-mode-active svg,
+html.smart-dark-mode-active [role="img"],
+html.smart-dark-mode-active picture {
   filter: invert(1) hue-rotate(180deg) !important;
 }
 
+/* Fix pre-existing dark elements so they do not turn white */
+html.smart-dark-mode-active [class*="dark"],
+html.smart-dark-mode-active [data-theme="dark"],
+html.smart-dark-mode-active [data-bs-theme="dark"],
+html.smart-dark-mode-active [style*="background-color: #0"],
+html.smart-dark-mode-active [style*="background-color: rgb(0"],
+html.smart-dark-mode-active [style*="background: #0"],
+html.smart-dark-mode-active [style*="background: rgb(0"] {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
+
+/* Form controls and inputs */
 html.smart-dark-mode-active input,
 html.smart-dark-mode-active textarea,
 html.smart-dark-mode-active select,
-html.smart-dark-mode-active [contenteditable="true"],
+html.smart-net-dark-mode-active [contenteditable="true"],
 html.smart-dark-mode-active [role="search"],
 html.smart-dark-mode-active [role="combobox"] {
-  background-color: #ffffff !important;
-  color: #000000 !important;
-  border-color: #cccccc !important;
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+  border-color: #444444 !important;
 }
 
+/* Search and input wrappers */
 html.smart-dark-mode-active [class*="search"],
 html.smart-dark-mode-active [id*="search"],
 html.smart-dark-mode-active [class*="input"],
@@ -31,6 +47,7 @@ html.smart-dark-mode-active [class*="bar"] {
   background-color: transparent !important;
 }
 
+/* Scrollbar styling */
 html.smart-dark-mode-active ::-webkit-scrollbar {
   width: 10px;
   background-color: #121212;

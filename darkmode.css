@@ -1,4 +1,4 @@
-/* Modern Universal Dark Engine - Fixed Search & Headings */
+/* Smart Dark Mode - Final Polish for Gmail & Inner Containers */
 
 html.smart-dark-mode-active,
 html.smart-dark-mode-active body {
@@ -6,7 +6,7 @@ html.smart-dark-mode-active body {
   color: #e0e0e0 !important;
 }
 
-/* Force dark backgrounds on major containers and cards */
+/* Force dark backgrounds on major containers but protect inner email bodies */
 html.smart-dark-mode-active div,
 html.smart-dark-mode-active section,
 html.smart-dark-mode-active article,
@@ -17,6 +17,14 @@ html.smart-dark-mode-active nav,
 html.smart-dark-mode-active aside {
   background-color: transparent !important;
   color: inherit !important;
+}
+
+/* Specific fix for email view inner white boxes/cards */
+html.smart-dark-mode-active [role="main"] div[style*="background"],
+html.smart-dark-mode-active .ii,
+html.smart-dark-mode-active .a3s {
+  background-color: #181818 !important;
+  color: #e0e0e0 !important;
 }
 
 /* Keep images, videos, canvas, and vector graphics completely untouched */
@@ -31,7 +39,7 @@ html.smart-dark-mode-active [role="img"] {
   mix-blend-mode: normal !important;
 }
 
-/* Typography elements - make headings bright and clear */
+/* Typography elements - ensure all headings and text are bright */
 html.smart-dark-mode-active h1,
 html.smart-dark-mode-active h2,
 html.smart-dark-mode-active h3,

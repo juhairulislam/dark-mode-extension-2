@@ -1,53 +1,68 @@
-/* Premium Universal Dark Engine - Polished Version */
+/* Modern Universal Dark Engine - Direct Color Mapping */
 
-html.smart-dark-mode-active {
-  filter: invert(1) hue-rotate(180deg) contrast(0.92) brightness(0.95) !important;
+html.smart-dark-mode-active,
+html.smart-dark-mode-active body {
   background-color: #121212 !important;
+  color: #e0e0e0 !important;
 }
 
-/* Keep media, images, and SVGs in correct colors */
+/* Force dark backgrounds on major containers and cards */
+html.smart-dark-mode-active div,
+html.smart-dark-mode-active section,
+html.smart-dark-mode-active article,
+html.smart-dark-mode-active main,
+html.smart-dark-mode-active header,
+html.smart-dark-mode-active footer,
+html.smart-dark-mode-active nav,
+html.smart-dark-mode-active aside {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+/* Keep images, videos, canvas, and vector graphics completely untouched */
 html.smart-dark-mode-active img,
 html.smart-dark-mode-active video,
 html.smart-dark-mode-active iframe,
 html.smart-dark-mode-active canvas,
 html.smart-dark-mode-active svg,
-html.smart-dark-mode-active [role="img"],
-html.smart-dark-mode-active picture {
-  filter: invert(1) hue-rotate(180deg) !important;
+html.smart-dark-mode-active picture,
+html.smart-dark-mode-active [role="img"] {
+  filter: none !important;
+  mix-blend-mode: normal !important;
 }
 
-/* Fix pre-existing dark elements so they do not turn white */
-html.smart-dark-mode-active [class*="dark"],
-html.smart-dark-mode-active [data-theme="dark"],
-html.smart-dark-mode-active [data-bs-theme="dark"],
-html.smart-dark-mode-active [style*="background-color: #0"],
-html.smart-dark-mode-active [style*="background-color: rgb(0"],
-html.smart-dark-mode-active [style*="background: #0"],
-html.smart-dark-mode-active [style*="background: rgb(0"] {
-  filter: invert(1) hue-rotate(180deg) !important;
+/* Typography elements */
+html.smart-dark-mode-active h1,
+html.smart-dark-mode-active h2,
+html.smart-dark-mode-active h3,
+html.smart-dark-mode-active h4,
+html.smart-dark-mode-active h5,
+html.smart-dark-mode-active h6,
+html.smart-dark-mode-active p,
+html.smart-dark-mode-active span,
+html.smart-dark-mode-active a,
+html.smart-dark-mode-active li,
+html.smart-dark-mode-active td,
+html.smart-dark-mode-active th {
+  color: #e0e0e0 !important;
 }
 
-/* Form controls and inputs */
+/* Links styling for visibility */
+html.smart-dark-mode-active a {
+  color: #64b5f6 !important;
+}
+
+/* Input fields, textareas and search bars */
 html.smart-dark-mode-active input,
 html.smart-dark-mode-active textarea,
 html.smart-dark-mode-active select,
-html.smart-net-dark-mode-active [contenteditable="true"],
-html.smart-dark-mode-active [role="search"],
-html.smart-dark-mode-active [role="combobox"] {
+html.smart-dark-mode-active [contenteditable="true"] {
   background-color: #1e1e1e !important;
-  color: #e0e0e0 !important;
-  border-color: #444444 !important;
+  color: #ffffff !important;
+  border-color: #333333 !important;
 }
 
-/* Search and input wrappers */
-html.smart-dark-mode-active [class*="search"],
-html.smart-dark-mode-active [id*="search"],
-html.smart-dark-mode-active [class*="input"],
-html.smart-dark-mode-active [class*="bar"] {
-  background-color: transparent !important;
-}
-
-/* Scrollbar styling */
+/* Scrollbars */
 html.smart-dark-mode-active ::-webkit-scrollbar {
   width: 10px;
   background-color: #121212;
